@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <link rel="stylesheet" href="cvstyles.css">
+</head>
+<body>
+  <h1>Job Application Form</h1>
+  <form action="" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+   
+    <div class="namenum">
+
+        <div class="nameinp">
+             <!-- Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="numinp">
+              <!-- Number -->
+            <label for="number">Mobile Number:</label>
+            <input type="tel" id="number" name="number" required>
+    
+        </div>
+    </div>
+  
+
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- Passport Number -->
+    <label for="passport">Passport Number:</label>
+    <input type="text" id="passport" name="passport" required>
+
+    <!-- Age -->
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <!-- Position Desire -->
+    <label for="position">Position Desire:</label>
+    <input type="text" id="position" name="position" required>
+
+    <!-- Language -->
+    <label for="language">Language:</label>
+    <input type="text" id="language" name="language" required>
+
+    <!-- Education -->
+    <label for="education">Education:</label>
+    <input type="text" id="education" name="education" required>
+
+    <!-- Experience in Years -->
+    <label for="experience">Experience in Years:</label>
+    <input type="number" id="experience" name="experience" required>
+
+    <!-- CV Upload -->
+    <label for="cv">Upload CV:</label>
+    <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required> <br>
+    <p><span style="color: red;">*</span>Cv should include all related document in a one file </p>
+    
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      // Get the values from the form
+      var name = document.getElementById('name').value;
+      var number = document.getElementById('number').value;
+      var email = document.getElementById('email').value;
+      var passport = document.getElementById('passport').value;
+      var age = document.getElementById('age').value;
+      var position = document.getElementById('position').value;
+      var language = document.getElementById('language').value;
+      var education = document.getElementById('education').value;
+      var experience = document.getElementById('experience').value;
+      var cv = document.getElementById('cv').value;
+
+      // Validate the form fields
+      if (name === "") {
+        alert("Please enter your name.");
+        return false;
+      }
+      if (number === "") {
+        alert("Please enter your number.");
+        return false;
+      }
+      if (email === "") {
+        alert("Please enter your email.");
+        return false;
+      }
+      if (passport === "") {
+        alert("Please enter your passport number.");
+        return false;
+      }
+      if (age === "" || isNaN(age)) {
+        alert("Please enter a valid age.");
+        return false;
+      }
+      if (position === "") {
+        alert("Please enter your desired position.");
+        return false;
+      }
+      if (language === "") {
+        alert("Please enter your language.");
+        return false;
+      }
+      if (education === "") {
+        alert("Please enter your education.");
+        return false;
+      }
+      if (experience === "" || isNaN(experience)) {
+        alert("Please enter a valid experience in years.");
+        return false;
+      }
+      if (cv === "") {
+        alert("Please upload your CV.");
+        return false;
+      }
+
+      // Additional validation can be added here if needed
+
+      // If all validations pass, the form will be submitted
+      return true;
+    }
+  </script>
+</body>
+</html>

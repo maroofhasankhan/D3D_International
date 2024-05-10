@@ -1,0 +1,81 @@
+/* Apply some basic styling to the form */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9),rgba(0,0,0,0.8)),url("./img/nicolas-jehly-pXQeH4Grp8Q-unsplash.jpg");
+    background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: 'Poppins',sans-serif;
+  
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  form {
+    /* min-width: 100vw; */
+    /* margin: 0 auto; */
+    margin: 20px 15rem;
+    padding: 5rem;
+    border-radius: 1rem;
+   background-color:rgba(255, 255, 255, 0.2) ;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+
+    font-size: 1.3rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  input{
+    margin-top: 0.8rem;;
+  }
+  
+.namenum{
+    display: flex;
+    /* text-align: center; */
+    
+}
+.nameinp,.numinp{
+    width: 49%;
+   
+}
+.nameinp{
+
+    margin-right: 2rem;
+}
+
+
+
+
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
